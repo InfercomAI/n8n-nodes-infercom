@@ -1,0 +1,64 @@
+{
+	"name": "n8n-nodes-infercom",
+	"version": "0.1.0",
+	"description": "n8n community node for Infercom - EU-sovereign AI inference platform powered by SambaNova",
+	"license": "MIT",
+	"homepage": "https://www.infercom.ai",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"infercom",
+		"ai",
+		"llm",
+		"chat",
+		"openai-compatible",
+		"eu-sovereign"
+	],
+	"author": {
+		"name": "Infercom",
+		"email": "support@infercom.ai"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/InfercomAI/n8n-nodes-infercom.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "vitest run --exclude 'test/api.live.test.ts'",
+		"test:live": "vitest run test/api.live.test.ts",
+		"test:all": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage --exclude 'test/api.live.test.ts'",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/InfercomApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Infercom/Infercom.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"@vitest/coverage-v8": "^4.0.17",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2",
+		"vitest": "^4.0.17"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

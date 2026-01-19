@@ -1,0 +1,17 @@
+{
+	"node": "n8n-nodes-infercom.infercom",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["AI"],
+	"subcategories": {
+		"AI": ["Language Models", "Root Nodes"]
+	},
+	"alias": ["Chat", "Europe", "EU", "GDPR", "LLM", "SambaNova"],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://docs.infercom.ai"
+			}
+		]
+	}
+}
