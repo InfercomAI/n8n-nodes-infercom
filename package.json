@@ -33,8 +33,7 @@
 		"test:all": "vitest run",
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage --exclude 'test/api.live.test.ts'",
-		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
+		"release": "n8n-node release"
 	},
 	"files": [
 		"dist"
