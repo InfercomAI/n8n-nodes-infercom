@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-infercom",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "n8n community node for Infercom - EU-sovereign AI inference platform powered by SambaNova",
 	"license": "MIT",
 	"homepage": "https://www.infercom.ai",
