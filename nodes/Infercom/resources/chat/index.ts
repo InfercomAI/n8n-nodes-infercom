@@ -25,16 +25,6 @@ export const chatCompletionDescription: INodeProperties[] = [
 						method: 'POST',
 						url: '/chat/completions',
 					},
-					output: {
-						postReceive: [
-							{
-								type: 'rootProperty',
-								properties: {
-									property: 'choices',
-								},
-							},
-						],
-					},
 				},
 			},
 		],

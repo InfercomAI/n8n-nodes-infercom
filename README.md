@@ -21,12 +21,14 @@ Send messages to AI models and receive intelligent responses. Supports:
 - System, user, and assistant message roles
 - Configurable parameters (temperature, max_tokens, top_p, etc.)
 
-### Performance Metrics
-Every response includes detailed performance metrics in the `usage` field:
-- `time_to_first_token` - Latency until first token (typically <100ms)
-- `completion_tokens_per_sec` - Token generation throughput
-- `total_latency` - Total response time
-- `completion_tokens_after_first_per_sec` - Sustained throughput after first token
+### Response Data
+The node returns the full API response, including:
+- `choices[0].message.content` - The AI's response text
+- `model` - The model used
+- `usage.prompt_tokens` / `usage.completion_tokens` - Token counts for cost tracking
+- `usage.time_to_first_token` - Latency until first token (typically <100ms)
+- `usage.completion_tokens_per_sec` - Token generation throughput
+- `usage.total_latency` - Total response time
 
 ## Installation
 
