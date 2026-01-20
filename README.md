@@ -2,6 +2,10 @@
 
 This is an n8n community node for [Infercom](https://www.infercom.ai) - an EU-sovereign AI inference platform powered by SambaNova technology.
 
+Infercom provides high-performance AI inference with full EU data sovereignty. All infrastructure is hosted in EU datacenters, ensuring your data never leaves EU jurisdiction. The API is fully OpenAI-compatible, making it easy to integrate into existing workflows while meeting GDPR and European regulatory requirements.
+
+This node enables n8n users to leverage powerful open-source AI models like Llama, DeepSeek, and Mistral for chat completions, with plans to expand to embeddings, audio transcription, and more. Whether you're building customer support automation, content generation pipelines, or intelligent data processing workflows, Infercom delivers enterprise-grade AI inference with the sovereignty guarantees European businesses need.
+
 ## Features
 
 - **EU Data Sovereignty**: Your data stays within EU jurisdiction (hosted in EU)
@@ -13,9 +17,16 @@ This is an n8n community node for [Infercom](https://www.infercom.ai) - an EU-so
 
 ### Chat Completions
 Send messages to AI models and receive intelligent responses. Supports:
-- Multiple Open Source AI models (e.g. gpt-oss-120b, DeepSeek)
+- Multiple open-source AI models (e.g., Llama, DeepSeek)
 - System, user, and assistant message roles
 - Configurable parameters (temperature, max_tokens, top_p, etc.)
+
+### Performance Metrics
+Every response includes detailed performance metrics in the `usage` field:
+- `time_to_first_token` - Latency until first token (typically <100ms)
+- `completion_tokens_per_sec` - Token generation throughput
+- `total_latency` - Total response time
+- `completion_tokens_after_first_per_sec` - Sustained throughput after first token
 
 ## Installation
 
@@ -60,10 +71,24 @@ Models are **fetched dynamically** from the Infercom API, so you always have acc
 
 Check [docs.infercom.ai](https://docs.infercom.ai) for the current model catalog.
 
+## Example Workflows
+
+Example workflows are available in the [examples](./examples) folder:
+
+- [basic-chat-workflow.json](./examples/basic-chat-workflow.json) - Simple chat completion with system and user messages
+
+To use an example:
+1. Download the JSON file
+2. In n8n, go to **Workflows** > **Import from File**
+3. Select the downloaded file
+4. Update the credentials to use your Infercom API key
+5. Select a model from the dropdown
+
 ## Resources
 
 - [Infercom Documentation](https://docs.infercom.ai)
 - [Infercom Website](https://www.infercom.ai)
+- [Infercom Cloud Dashboard](https://cloud.infercom.ai)
 - [n8n Community Nodes Documentation](https://docs.n8n.io/integrations/community-nodes/)
 
 ## License
